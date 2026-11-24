@@ -5,6 +5,15 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.3] — 2026-11-24
+
+### Changed
+
+- Both screenshots moved to the repository root and the panel capture now sits
+  centred at the top of the README, so a visitor sees the result before reading
+  anything. The pill image stays a render from the plugin's stylesheet so no live
+  Session amounts are published; the panel image is a real capture.
+
 ## [1.4.2] — 2026-11-24
 
 ### Changed

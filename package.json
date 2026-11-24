@@ -1,6 +1,6 @@
 {
   "name": "deepseek-harness-cost",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Chat cost meter for DeepSeek Harness: shows what the open chat cost in the currency its provider bills in — CNY on the DeepSeek platform, USD plus the OpenCode Go subscription allowance — with the realized rate per 1K tokens",
   "type": "module",
   "main": "index.js",
