@@ -5,6 +5,16 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.2] — 2026-11-24
+
+### Changed
+
+- The panel image under **What you see** is now a real capture of the panel that
+  opens when the usage pill is clicked (one OpenCode Go session), so the README
+  shows the exact result instead of a rendered preview. The pill image at the top
+  stays a render from the plugin's stylesheet, because a live capture of it would
+  show a real Session's amounts.
+
 ## [1.4.1] — 2026-11-24
 
 ### Added
