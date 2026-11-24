@@ -5,6 +5,18 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1] — 2026-11-24
+
+### Added
+
+- An **Install with your AI** section at the top of the README: one copy-paste
+  prompt that tells a coding agent how to install this plugin into the running
+  DeepSeek Harness profile, how to verify it, and which step to report if the
+  machine cannot run it.
+- Two preview images (`docs/preview.png`, `docs/preview-panel.png`) rendered from
+  the plugin's own stylesheet with sample values, so the README shows the pill
+  and the expanded panel without exposing anyone's Session.
+
 ## [1.4.0] — 2026-11-24
 
 First public release. Previously developed and installed privately; nothing in

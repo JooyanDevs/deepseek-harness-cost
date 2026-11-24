@@ -18,13 +18,43 @@ A chat that used both providers shows both currencies side by side instead of
 converting one into the other. A chat on a provider with no price card shows no
 money and reports the excluded requests in the panel.
 
-```
-¥0.551 · ¥0.0000214/1K          $0.0762 · $0.00000967/1K · 5h 12% · 7d 9% · 30d 8%
+![The chat cost pill under the composer, showing the OpenCode Go allowance windows and the cost of each currency the chat spent](https://raw.githubusercontent.com/JooyanDevs/deepseek-harness-cost/main/docs/preview.png)
+
+<sub>Sample values. The pill reads, left to right: allowance windows, then one
+cost reading per currency the chat used.</sub>
+
+## Install with your AI
+
+Copy the prompt below into Claude, Codex, Cursor, or any agent that can run
+commands on this machine. It installs the plugin into the DeepSeek Harness
+profile the agent finds running, then checks that it loaded.
+
+```text
+Install the DeepSeek Harness plugin "deepseek-harness-cost" into the DSH profile that
+is running on this machine, then verify it.
+
+1. Find the running DeepSeek Harness profile: Desktop keeps profiles under
+   ~/.dsh/profiles/ (use the one the running app uses), and a CLI install reports it
+   with `dsh plugin --profile <profile> ...`. Do not create or switch profiles.
+2. Install through the supported path, in this order:
+   a. GUI: Plugins -> Add plugin -> deepseek-harness-cost
+   b. CLI: dsh plugin --profile <profile> add deepseek-harness-cost
+   c. If the dsh command is not available (Desktop app), install inside the profile
+      directory with pnpm: `pnpm add deepseek-harness-cost`, then add
+      "deepseek-harness-cost" to dsh.profile.bundles in that profile's package.json.
+3. Do not edit the plugin's files, do not touch other plugins, and do not modify any
+   Session data.
+4. Verify: the Plugins page lists deepseek-harness-cost with a "chat-cost" row, and
+   after reloading the page a cost pill appears under the chat composer showing the
+   chat cost and rate per 1K tokens.
+5. If this machine uses OpenCode Go, check that an OPENCODE_GO_API_KEY credential
+   exists in the Harness credential store. Without it the cost still shows; the
+   allowance section reports a missing key.
+Report what you changed and which version is installed. If any step is not possible
+on this machine, stop and say which step and why instead of working around it by hand.
 ```
 
-Click the pill for the panel: requests, uncached/cached/cache-write input and
-output tokens, the cache-hit rate, the peak/off-peak split, a per-model
-breakdown, and the allowance detail.
+Prefer to do it yourself? The two commands are in [Install](#install) below.
 
 ## Why this one
 
@@ -42,6 +72,17 @@ breakdown, and the allowance detail.
   cannot inflate the number it displays.
 - **No dependencies, no build step.** Plain ESM; the browser half borrows React
   from the Host module table.
+
+## What you see
+
+Click the pill for the full reading: requests, uncached/cached/cache-write input
+and output tokens, the cache-hit rate, the peak/off-peak split, a per-model
+breakdown, and the allowance detail.
+
+![The expanded panel: OpenCode Go allowance windows with reset countdowns, the DeepSeek platform CNY rows, and the OpenCode Go USD rows](https://raw.githubusercontent.com/JooyanDevs/deepseek-harness-cost/main/docs/preview-panel.png)
+
+<sub>Sample values. The allowance section only appears for a chat that used
+OpenCode Go; the currency sections appear for every provider the chat billed.</sub>
 
 ## Install
 
