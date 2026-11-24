@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local secrets and machine state
+.env
+.env.*
+*.pem
+*.key

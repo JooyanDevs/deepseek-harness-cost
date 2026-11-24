@@ -1,0 +1,67 @@
+{
+  "name": "deepseek-harness-cost",
+  "version": "1.4.0",
+  "description": "Chat cost meter for DeepSeek Harness: shows what the open chat cost in the currency its provider bills in — CNY on the DeepSeek platform, USD plus the OpenCode Go subscription allowance — with the realized rate per 1K tokens",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JooyanDevs/deepseek-harness-cost.git"
+  },
+  "homepage": "https://github.com/JooyanDevs/deepseek-harness-cost#readme",
+  "bugs": {
+    "url": "https://github.com/JooyanDevs/deepseek-harness-cost/issues"
+  },
+  "author": "Jooyan Bagheri",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "dsh",
+    "dsh-plugin",
+    "cost",
+    "chat-cost",
+    "token-cost",
+    "token-usage",
+    "usage-meter",
+    "cny",
+    "usd",
+    "opencode",
+    "opencode-go",
+    "quota",
+    "allowance"
+  ],
+  "license": "MIT"
+}

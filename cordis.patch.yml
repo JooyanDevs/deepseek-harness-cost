@@ -1,0 +1,59 @@
+# Chat cost meter for DeepSeek Harness.
+#
+# One row: the host half folds each Session log into per-currency token buckets
+# and prices them with the matching provider card. The browser half (this
+# package's `dsh.client` bundle) shows the result under the composer.
+# Removing this entry removes the meter.
+- insert:
+    - id: chat-cost
+      name: 'deepseek-harness-cost'
+
+# Optional overrides. Copy the fields you need into the row above; every field
+# has a working default, and the values below are the defaults.
+#
+# - id: chat-cost
+#   name: 'deepseek-harness-cost'
+#   config:
+#     # Provider route → currency. A named route missing here is not priced and
+#     # is reported as excluded; a request with no recorded provider keeps CNY.
+#     routes:
+#       deepseek-official: CNY
+#       deepseek-account: CNY
+#       opencode-go: USD
+#
+#     # DeepSeek CNY list prices per 1M tokens at PEAK time; off-peak bills at
+#     # offPeakRatio of these.
+#     models:
+#       deepseek-flash: { cacheHit: 0.02, cacheMiss: 1, cacheWrite: 0, output: 4 }
+#       deepseek-v4-pro: { cacheHit: 0.15, cacheMiss: 4.5, cacheWrite: 0, output: 13.5 }
+#     defaultModel: deepseek-flash
+#     offPeakRatio: 0.5
+#     # auto | peak | off-peak
+#     peakMode: auto
+#     peak:
+#       timezoneOffsetMinutes: 480
+#       days: [1, 2, 3, 4, 5]
+#       windows: [[9, 12], [14, 18]]
+#       holidays: []
+#
+#     # OpenCode Go: the allowance endpoint and the live USD price sheet.
+#     usd:
+#       apiKeyRef: OPENCODE_GO_API_KEY
+#       baseUrl: https://opencode.ai
+#       modelsPath: /zen/go/v1/models
+#       usagePaths:
+#         - /zen/go/v1/usage
+#         - /inference/go/v1/usage
+#       # go | go-plus | go-teams — names the plan and its per-model monthly
+#       # limit in the allowance panel; the percentages themselves come from
+#       # OpenCode and do not depend on this value.
+#       plan: go
+#       quotaTtlSeconds: 30
+#       modelsTtlSeconds: 3600
+#       requestTimeoutMs: 10000
+#       # Overrides the per-model monthly limit when set.
+#       monthlyLimitUsd: null
+#       # Optional USD per 1M token overrides; the live models endpoint otherwise
+#       # supplies them.
+#       prices:
+#         deepseek-v4.1-flash: { input: 0.15, output: 0.6, cacheRead: 0.003, cacheWrite: 0, peakFactor: 2 }

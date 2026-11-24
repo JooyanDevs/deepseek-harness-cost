@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Chat cost",
+    "description": "Shows what the open chat has cost in the currency its provider bills in, under the composer beside the activity and usage pills. A DeepSeek platform Session shows its CNY total and realized CNY rate per 1K tokens. An OpenCode Go Session shows its USD total, the USD rate per 1K tokens, and the subscription allowance windows (5-hour, weekly, monthly) with their reset countdowns. A Session that used both shows both currencies separately. Click a pill for requests, uncached and cached input, output, the cache-hit rate, the peak/off-peak split, a per-model breakdown, and the allowance detail. Subagent sessions are included in the parent figure."
+  }
+}
