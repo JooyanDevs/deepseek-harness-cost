@@ -19,14 +19,10 @@ converting one into the other. A chat on a provider with no price card shows no
 money and reports the excluded requests in the panel.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/JooyanDevs/deepseek-harness-cost/main/preview-panel.png" width="300" alt="The panel that opens when you click the usage pill: OpenCode Go allowance windows with reset countdowns, per-1K and per-1M rates, this chat versus its subagent sessions, the token breakdown, cache-hit rate, cache saved, peak and off-peak cost, and the per-model total">
+  <img src="https://raw.githubusercontent.com/JooyanDevs/deepseek-harness-cost/main/preview.jpg" width="860" alt="A DeepSeek Harness chat with the cost meter: the pill under the composer shows the spend and the realized rate per 1K tokens, and the panel it opens shows the OpenCode Go allowance windows with reset countdowns, the cost rows, the token breakdown and the per-model total">
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JooyanDevs/deepseek-harness-cost/main/preview.png" width="700" alt="The chat cost pill under the composer, showing the OpenCode Go allowance windows and the cost of each currency the chat spent">
-</p>
-
-<p align="center"><sub>Top: the panel that opens when you click the usage pill — a real capture. Bottom: the pill under the composer, with sample values.</sub></p>
+<p align="center"><sub>The cost pill under the composer, and the panel it opens.</sub></p>
 
 ## Install with your AI
 
@@ -80,16 +76,15 @@ Prefer to do it yourself? The two commands are in [Install](#install) below.
 
 ## What you see
 
-The everyday view, the lower of the two images above: the pill sits under the
-composer and shows, left to right, the OpenCode Go allowance windows and then one
-cost reading per currency the chat used.
+The pill sits under the composer and shows, left to right, the OpenCode Go
+allowance windows and then one cost reading per currency the chat used.
 
-Click the pill for the panel, the upper image: the allowance windows with their
-reset countdowns, per-1K and per-1M rates, this chat versus its subagent sessions,
-requests, uncached and cache-hit input, output, the cache-hit rate, cache saved,
-the peak/off-peak split, and one row per model. The allowance section appears
-only for a chat that used OpenCode Go, and every currency the chat billed gets its
-own section.
+Click the pill for the panel: the allowance windows with their reset countdowns,
+per-1K and per-1M rates, this chat versus its subagent sessions, requests,
+uncached and cache-hit input, output, the cache-hit rate, cache saved, the
+peak/off-peak split, and one row per model. The allowance section appears only for
+a chat that used OpenCode Go, and every currency the chat billed gets its own
+section.
 
 ## Install
 

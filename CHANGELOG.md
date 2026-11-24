@@ -5,6 +5,14 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.5] — 2026-11-24
+
+### Changed
+
+- The README now shows a single full-app image: a chat with the cost pill under
+  the composer and the panel it opens, instead of two separate captures. The
+  image ships as `preview.jpg` (about 200 kB) rather than a megabyte PNG.
+
 ## [1.4.4] — 2026-11-24
 
 ### Changed
